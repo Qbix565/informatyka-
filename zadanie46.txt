@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int l_mniejsze=0, l_wieksze=0, l_rowne=0;
+    float a[8];
+    for(int i=0; i<8; i++){
+        a[i]=0;
+        cout << "Podaj A[" << i << "]=";
+        cin >> a[i];
+        if(a[i]==0){
+            l_rowne++;
+        }
+        else if(a[i]>0){
+            l_wieksze++;
+        }
+        else if (a[i]<0){
+            l_mniejsze++;
+        }
+    }
+    cout << "liczba wyrazow ciagu ktore sa wieksze od zera wynosi " << l_wieksze << endl;
+    cout << "liczba wyrazow ciagu ktore sa rowne zero wynosi " << l_rowne << endl;
+    cout << "liczba wyrazow ciagu ktore sa mniejsze od zera wynosi " << l_mniejsze << endl;
+}
